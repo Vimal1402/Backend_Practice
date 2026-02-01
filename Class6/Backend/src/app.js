@@ -1,8 +1,10 @@
 const express = require('express');
-const app = express();
-const noteModel = require('./models/note.model')
+const noteModel = require('./models/note.model');
+const cors = require('cors')
 
+const app = express();
 app.use(express.json())
+app.use(cors())
 
 // Creating API -- POST
 app.post('/api/notes', async (req, res) =>{
