@@ -19,6 +19,11 @@ const userSchema = new mongoose.Schema({
     bio: String,
     profileImage: {
         type: String,
-        default: 'https://ik.imagekit.io/Vimal1402/DefaultUserImage.webp'
+        default: "https://ik.imagekit.io/Vimal1402/DefaultUserpic.webp"
     }
 })
+
+
+const userModel = mongoose.model("users", userSchema)
+
+module.exports = userModel
